@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "creation": "2021-02-12 15:32:25.127942",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "address",
+  "telephone_number",
+  "agents_address",
+  "amount_paid",
+  "payments_date",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner's name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant's name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "telephone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Telephone number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agents_address",
+   "fieldtype": "Data",
+   "label": "Agent's address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount paid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payments_date",
+   "fieldtype": "Date",
+   "label": "Payment's date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Date",
+   "label": "Due date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-02-12 22:16:43.528423",
+ "modified_by": "Administrator",
+ "module": "New Estate Management",
+ "name": "Agreement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
