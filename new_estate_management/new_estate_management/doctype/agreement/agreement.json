@@ -1,34 +1,22 @@
 {
  "actions": [],
+ "autoname": "format: {owners_name} agreement",
  "creation": "2021-02-12 15:32:25.127942",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "first_name",
-  "last_name",
+  "owners_name",
+  "tenants_name",
   "address",
   "telephone_number",
   "agents_address",
   "amount_paid",
   "payments_date",
-  "duration"
+  "due_date",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Owner's name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Tenant's name",
-   "reqd": 1
-  },
   {
    "fieldname": "address",
    "fieldtype": "Data",
@@ -62,15 +50,41 @@
    "reqd": 1
   },
   {
-   "fieldname": "duration",
+   "fieldname": "due_date",
    "fieldtype": "Date",
    "label": "Due date",
    "reqd": 1
+  },
+  {
+   "fieldname": "owners_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner's name",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenants_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant's name",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Agreement",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2021-02-12 22:16:43.528423",
+ "modified": "2021-02-15 16:35:15.900291",
  "modified_by": "Administrator",
  "module": "New Estate Management",
  "name": "Agreement",
@@ -86,6 +100,20 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
